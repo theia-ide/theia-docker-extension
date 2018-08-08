@@ -1,0 +1,35 @@
+{
+  "name": "@theia/docker",
+  "keywords": [
+    "theia-extension"
+  ],
+  "license": "EPL-2",
+  "version": "0.1.0",
+  "files": [
+    "data",
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@theia/core": "next",
+    "@theia/monaco": "next",
+    "dockerfile-language-server-nodejs": "^0.0.18"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "postinstall": "",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/docker-frontend-module",
+      "backend": "lib/node/docker-backend-module"
+    }
+  ]
+}
