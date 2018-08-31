@@ -53,7 +53,7 @@ export class DockerGrammarContribution implements LanguageGrammarDefinitionContr
             ]
         });
         const grammar = require('../../data/docker.tmLanguage.json');
-        registry.registerTextMateGrammarScope(this.scopeName, {
+        registry.registerTextmateGrammarScope(this.scopeName, {
             async getGrammarDefinition() {
                 return {
                     format: 'json',
