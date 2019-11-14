@@ -16,11 +16,11 @@
   "dependencies": {
     "@theia/core": "next",
     "@theia/monaco": "next",
-    "dockerfile-language-server-nodejs": "^0.0.18"
+    "dockerfile-language-server-nodejs": "^0.0.21"
   },
   "devDependencies": {
     "rimraf": "latest",
-    "typescript": "^2.7.2"
+    "typescript": "~3.5.3"
   },
   "scripts": {
     "prepare": "yarn run clean && yarn run build",
